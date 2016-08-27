@@ -1,0 +1,42 @@
+<head>
+    <title>mason_new</title>
+</head>
+
+<body>
+{{>nav}}
+<div class="container">
+    {{>main}}
+</div>
+</body>
+
+
+<template name="main">
+
+    {{#masonryContainer columnWidth=1 transitionDuration="0.1s" gutter=2 id="MasonryContainer" isOriginTop = true}}
+
+        {{#masonryElement "MasonryContainer"}}
+            <button id="addPic" class="btn btn-danger" name="add" style='width:192px'>Add</button>
+        {{/masonryElement}}
+
+        {{#each items}}
+            {{#masonryElement "MasonryContainer"}}
+                {{> item_tem}}
+            {{/masonryElement}}
+        {{/each}}
+
+    {{/masonryContainer}}
+
+</template>
+
+<template name="item_tem">
+    <div id="items">
+        <div>
+            <img src="{{src}}">
+        </div>
+
+        <div>
+            <p>{{no}}</p>
+            <button class="btn btn-default" name="rm">rm</button>
+        </div>
+    </div>
+</template>
