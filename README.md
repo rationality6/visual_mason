@@ -8,6 +8,7 @@ to show Meteor's reactivity visually
 -- masonrify
 -- bootstrap
 
+https://visualmason.herokuapp.com/
 
 ![alt tag](pics/web.png)
 
