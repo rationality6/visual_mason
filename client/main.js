@@ -3,7 +3,7 @@ import {ReactiveVar} from 'meteor/reactive-var';
 
 import './main.html';
 
-Template.main.onCreated(function() {
+Template.main.onCreated(() => {
 
 });
 
@@ -16,8 +16,8 @@ Template.main.helpers({
 Template.main.events({
   'click button[name=add]'(e, i) {
 
-    var random = Math.floor(Math.random() * 12);
-    var created_at = new Date();
+    let random = Math.floor(Math.random() * 12);
+    let created_at = new Date();
 
     Pics.insert({no: random, src: `image_${random}.jpg`, created_at: created_at});
   },
